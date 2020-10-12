@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web:wght@300&display=swap");
+html {
+  min-height: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +15,8 @@ h2, h3 {
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
+  background-image: url(recursos/pegasus.png);
+  background-position: center;
 }
 
 header {
@@ -39,6 +45,12 @@ article {
   width: 100%;
   height: 388px;
 }
+article :hover {
+  box-shadow: 0 0 12px #23adff;
+}
+article * :hover {
+  box-shadow: none;
+}
 
 section:after {
   content: "";
@@ -51,6 +63,7 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+  margin-top: 150px;
 }
 footer p, footer a {
   display: inline-block;
@@ -77,6 +90,7 @@ footer p, footer a {
   height: 30px;
   font-size: 23px;
   text-align: center;
+  cursor: pointer;
 }
 
 .calculadora td:nth-child(4) button {
@@ -95,6 +109,40 @@ footer p, footer a {
 
 button#igual, button#reset {
   background-color: #eed7b9;
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 33%;
+  }
+}
+button {
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: relative;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
 }
 
 /*# sourceMappingURL=styles.css.map */
