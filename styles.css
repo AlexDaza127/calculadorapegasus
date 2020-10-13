@@ -105,6 +105,7 @@ footer p, footer a {
   width: 250px;
   height: 100px;
   line-height: 100px;
+  overflow-y: scroll;
 }
 
 button#igual, button#reset {
